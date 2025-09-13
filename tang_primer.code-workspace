@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "Tang Primer Project",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "simulation": true,
+      "*.vcd": false
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "mshr-h.veriloghdl",
+      "terostechnology.teroshdl",
+      "formulahendry.code-runner"
+    ]
+  }
+}

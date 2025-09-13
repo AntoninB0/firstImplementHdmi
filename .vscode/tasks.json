@@ -1,0 +1,66 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Verilog (All Files)",
+      "type": "shell",
+      "command": "iverilog",
+      "args": [
+        "-Wall",
+        "-o",
+        "simulation",
+        "${workspaceFolder}/src/*.v",
+        "${workspaceFolder}/testbench/*.v"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/testbench"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Current Testbench",
+      "type": "shell",
+      "command": "iverilog",
+      "args": [
+        "-o",
+        "simulation",
+        "../src/pixel_counters.v", // AJOUT: Fichier source explicite
+        "${file}" // Fichier testbench actuel
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "Run Simulation",
+      "type": "shell",
+      "command": "vvp",
+      "args": ["simulation"],
+      "dependsOn": "Run Current Testbench",
+      "group": "test"
+    },
+    {
+      "label": "Open GTKWave",
+      "type": "shell",
+      "command": "gtkwave",
+      "args": ["waves.vcd"],
+      "dependsOn": "Run Simulation"
+    },
+    {
+      "label": "Full Test Current File",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Run Current Testbench", "Run Simulation", "Open GTKWave"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}
