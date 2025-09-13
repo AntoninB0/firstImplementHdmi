@@ -1,0 +1,20 @@
+[
+ {
+  "InstFile" : "H:/protected/TangPrimer20KPersonalWork/firstImplementHdmi/Documents/fpga_project/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "H:/protected/TangPrimer20KPersonalWork/firstImplementHdmi/Documents/fpga_project/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "H:/protected/TangPrimer20KPersonalWork/firstImplementHdmi/Documents/fpga_project/src/top.v",
+    "InstLine" : 9,
+    "InstName" : "timing_gen",
+    "ModuleFile" : "H:/protected/TangPrimer20KPersonalWork/firstImplementHdmi/Documents/fpga_project/src/Counter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "pixel_counters"
+   }
+  ]
+ }
+]

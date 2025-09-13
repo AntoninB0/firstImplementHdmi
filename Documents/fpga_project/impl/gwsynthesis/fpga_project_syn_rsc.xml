@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" T_Register="22(0)" T_Lut="47(0)">
+ <SubModule name="timing_gen" Register="22" Lut="47" T_Register="22(22)" T_Lut="47(47)"/>
+</Module>

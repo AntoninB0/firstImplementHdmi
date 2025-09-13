@@ -6,17 +6,14 @@
   // CORRECTION: Code Runner pour fichiers multiples
   "code-runner.executorMap": {
     "python": "python",
-    "verilog": "cd $dir && iverilog -o simulation ..\\src\\*.v $fileName && vvp simulation"
+    "verilog": "cd $dir && iverilog -o simulation ..\\src\\*.v $fileName && vvp simulation && gtkwave waves.vcd"
   },
   "code-runner.executorMapByGlob": {
     "*.py": "python"
   },
   "code-runner.executorMapByFileExtension": {
-    ".v": "cd $dir && iverilog -o simulation ..\\src\\*.v $fileName && vvp simulation"
+    ".v": "cd $dir && iverilog -o simulation ..\\src\\*.v $fileName && vvp simulation && gtkwave waves.vcd"
   },
-
-  // Pour Linux/Mac, utilise / au lieu de \\
-  // "verilog": "cd $dir && iverilog -o simulation ../src/*.v $fileName && vvp simulation"
 
   "files.associations": {
     "*.v": "verilog",
